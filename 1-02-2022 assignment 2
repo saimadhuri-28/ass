@@ -1,0 +1,34 @@
+/*G. Sai madhuri adc gwk*/
+#include<stdio.h>
+void swap1(int,int);
+void swap2(int *x,int *y);
+int main()
+{
+    int a,b;
+    printf("Enter a,b values:");
+    scanf("%d%d",&a,&b);
+    printf("Before Swapping:");
+    printf("a=%d b=%d",a,b);
+    swap1(a,b);
+    swap2(&a,&b);
+    return 0;
+}
+void swap1(int x,int y)
+{
+    int temp;
+    temp=x;
+    x=y;
+    y=temp;
+    printf("\nAfter Swapping:");
+    printf("a=%d b=%d",x,y);
+}
+void swap2(int*x,int*y)
+{
+    int temp;
+    temp=*x;
+    *x=*y;
+    *y=temp;
+    printf("\n After swapping in swap function:");
+    printf("\n Value of x=%d \n",*x);
+    printf("\n Value of y=%d \n",*y);
+}
